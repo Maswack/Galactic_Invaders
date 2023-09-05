@@ -25,16 +25,27 @@ class panelHandler {
                     return new Promise( (res) => {
                         document.addEventListener('keydown', keyHandler)
 
+                        const html_popup_href = "./panels/popup/popup.html" 
                         //Create some block that tells user to press
                         //button they wish for this control
 
-                        //for now
-                       
-                        alert('press any button')
+                        fetch(html_popup_href)
+                        .then( (res) => { return res.text() })
+                        .then( (send) => {
+
+                            const new_html_file = domParser.parseFromString(send, "text/html")
+                            const window = new_html_file.querySelector('.window')
+
+                            insertFrame.append(window)
+
+                            
+                        })
+                        
 
                         function keyHandler(e) {
                             if (e.key) {
                                 lastKeyPress = e.key
+                                insertFrame.children[2].remove()
 
                                 document.removeEventListener('keydown', keyHandler)
                                 res();

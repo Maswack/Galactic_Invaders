@@ -1,0 +1,21 @@
+.window {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30%;
+    margin-top: 20%;
+
+    color: rgb(210, 210, 210);
+    background-color: black;
+
+    width: 40%;
+    height: 15%;
+
+    border: 0.1em solid rgb(220, 0, 0);
+    border-radius: 0.3em;
+}
+.window p {
+    font-size: 2em;
+}
