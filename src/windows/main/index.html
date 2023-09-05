@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./panels/panels.css">
+
+        <link id="video_link" href="./panels/video/video.html" rel="import" />
+        <link id="audio_link" href="./panels/audio/audio.html" rel="import" />
+        <link id="controls_link" href="./panels/controls/controls.html" rel="import" />
+
+        <title>[Name] Menu</title>
+    </head>
+    <body>
+        <nav>
+            <div class="navd0"><p>Play</p></div>
+            <div class="navd1"><p>Video</p></div>
+            <div class="navd2"><p>Audio</p></div>
+            <div class="navd3"><p>Controls</p></div>
+            <div class="navd4"><p>Quit</p></div>
+        </nav>
+
+        <main id="settingsFrame">
+            <canvas id="canvas"></canvas>
+        </main>
+    </body>
+    <script defer type="module" src="./index.js"> </script>
+</html>

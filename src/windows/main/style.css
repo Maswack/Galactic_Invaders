@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+    color: rgb(210, 210, 210);
+    background-color: rgb(48, 48, 48);
+
+}
+
+canvas {
+    overflow: none;
+    position: absolute;
+
+    box-sizing: border-box;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+
+    box-shadow: 0.75rem 0rem 0.5rem red;
+}
+nav div {    
+    width: 20%;
+    height: 100%;
+
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav div p {
+    margin: 0;
+    height: 50%;
+}
+
+/* main section, where settings are to be set */
+main {
+    height: 90%;
+    width: 100%;
+}
+
+/* imported Html files main element 
+And other elemnts that require styling*/
