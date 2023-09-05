@@ -2,7 +2,9 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const fs = require('fs')
 
+
 //const data = fs.readFileSync('./data/gameData.json')
+const game_data_link = path.join(__dirname, 'data/gameData.json')
 
 const createWindow = () => {
     //If some operations will be useful regarding
@@ -54,8 +56,24 @@ ipcMain.on("start-game", (event) => {
 })
 
 ipcMain.on('update-settings', (event, value, id, type) => {
-    console.log('update_settings')
-    console.log(value + "_" +  id + "_" + type)
+    //Check values
+    //console.log(value + "_" +  id + "_" + type)
+
+    //Read json file with game data
+    const game_data = JSON.parse(fs.readFileSync(game_data_link))
+
+    //update value
+    game_data.game.settings[type][id] = value
+
+    //write to file
+    fs.writeFileSync(game_data_link, JSON.stringify(game_data))
+})
+ipcMain.on('load-settings', () => {
+    //Read json file with game data
+    const game_data = JSON.parse(fs.readFileSync(game_data_link))
+    const window = BrowserWindow.getFocusedWindow()
+
+    window.webContents.send('send-settings', game_data.game)
 })
 
 

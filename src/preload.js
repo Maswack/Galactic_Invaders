@@ -5,8 +5,13 @@ const { contextBridge, ipcRenderer } = require('electron')
 //through webpage
 contextBridge.exposeInMainWorld('electronAPI', {
     startGame: () => { ipcRenderer.send('start-game') },
-    updateSettings: (value, id, type) => { ipcRenderer.send('update-settings', value, id, type) }
+    
+    //Settings section
+    sendSettings: (data) => { ipcRenderer.on('send-settings', data) },
+    loadSettings: () => { ipcRenderer.send('load-settings') },
+    updateSettings: (value, id, type) => { ipcRenderer.send('update-settings', value, id, type) },
 })
+
 
 
 
