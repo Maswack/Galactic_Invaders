@@ -30,12 +30,19 @@ const createWindow = () => {
 }
 
 ipcMain.on("start-game", (event) => {
+    const gameData = JSON.parse(fs.readFileSync(game_data_link))
+    const videoData = gameData.game.settings.video
+    
+    //Consist of resolution for screen
+    const videoRes = videoData.resolution.split("x")
+
+
     const gameWindow = new BrowserWindow({
         show: false,
-        fullscreen: false,
-        resizable: false,
-        width: 960,
-        height: 680,
+        fullscreen: videoData.fullscreen,
+        resizable: true,
+        width: parseInt(videoRes[0]),
+        height: parseInt(videoRes[1]),
         icon: path.join(__dirname, 'assets/gfx/icon.ico'),
 
         webPreferences: {
@@ -52,6 +59,9 @@ ipcMain.on("start-game", (event) => {
 
         const oldWindow = BrowserWindow.fromId(1)
         oldWindow.close()
+
+        //Send Settings
+        gameWindow.webContents.send('send-settings', gameData.game)
     })
 })
 
