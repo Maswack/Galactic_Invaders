@@ -1,0 +1,5 @@
+class gameRenderer {
+
+}
+
+export { gameRenderer }

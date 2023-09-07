@@ -1,5 +1,0 @@
-class gameRender {
-
-}
-
-export { gameRender }
