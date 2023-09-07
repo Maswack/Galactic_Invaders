@@ -1,6 +1,6 @@
 //import NavControler file
-import { navHandler } from "./navControler.js"
-import { canvasController } from "./canvasControler.js"
+import { navHandler } from './handlers/navControler.js'
+import { canvasController } from "./handlers/canvasControler.js"
 
 
 //important setup
