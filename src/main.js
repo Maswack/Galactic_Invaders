@@ -51,7 +51,7 @@ ipcMain.on("start-game", (event) => {
         }
     })
 
-    gameWindow.loadFile("src/windows/game/index.html")
+    gameWindow.loadFile("src/windows/game/game.html")
 
 
     gameWindow.once('ready-to-show', () => {

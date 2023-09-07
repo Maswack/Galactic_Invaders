@@ -2,6 +2,7 @@ class settingsControler {
     /* Settings handler, responsible for settings-update */
     static async updateSettings(elements, component_type, insertFrame) {
         const domParser = new DOMParser()
+        
 
         elements.forEach((e) => {
             const rawId = e.id.split('_')
@@ -13,7 +14,8 @@ class settingsControler {
                 return new Promise((res) => {
                     document.addEventListener('keydown', keyHandler)
 
-                    const html_popup_href = "./panels/popup/popup.html"
+
+                    const html_popup_href = "../main/panels/popup/popup.html"
 
                     //Creates popup panel
                     fetch(html_popup_href)

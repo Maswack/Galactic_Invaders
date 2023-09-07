@@ -1,0 +1,5 @@
+class game {
+    
+}
+
+export { game }

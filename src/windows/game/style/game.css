@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+    color: rgb(210, 210, 210);
+    background-color: rgb(12, 12 ,12);
+
+}
+
+#gameSettings {
+    visibility: visible;
+    height: 100%;
+    
+
+    background-color: rgb(48, 48, 48);
+}

@@ -9,23 +9,24 @@ const canvasCon = new canvasController(document.getElementById('canvas'))
 //Listeners Section
 window.addEventListener("load", (event) => {
     const navDiv = document.querySelectorAll("nav div")
+    const insertId = "settingsFrame"
 
     canvasCon.init()
 
     navDiv.forEach((div) => {
         //Click event
         div.addEventListener("click", (event) => {
-            navHandler.click(event)
+            navHandler.click(event, insertId)
         })
 
         //Mouse entering nav Div
         div.addEventListener("mouseenter", (event) => {
-            navHandler.mouseEnter(event)
+            navHandler.mouseEnter(event, insertId)
         })
 
         //Mouse leaving nav Div
         div.addEventListener("mouseleave", (event) => {
-            navHandler.mouseLeave(event)
+            navHandler.mouseLeave(event, insertId)
         })
     })
 })

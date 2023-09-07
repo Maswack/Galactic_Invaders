@@ -19,7 +19,7 @@ class panelHandler {
 
             settingsControler.updateSettings(elements, component_type, insertFrame);
             settingsControler.loadSettings(elements, component_type, insertFrame);
-
+            
 
             if (insertFrame.children.length > 1) { insertFrame.children[1].remove() }
 

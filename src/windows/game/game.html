@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../main/style.css" rel="stylesheet">
+    <link href="../main/panels/panels.css" rel="stylesheet">
+    <link href="../main/panels/popup.css" rel="stylesheet">
+    <link href="./style/game.css" rel="stylesheet">
+
+    <link id="video_link" href="../main/panels/video/video.html" rel="import" />
+    <link id="audio_link" href="../main/panels/audio/audio.html" rel="import" />
+    <link id="controls_link" href="../main/panels/controls/controls.html" rel="import" />
+
+    <title>[Name]</title>
+</head>
+<body>
+    <div id="gameSettings">
+        <nav id="settingsFrame">
+            <div class="navd1"><p>Video</p></div>
+            <div class="navd2"><p>Audio</p></div>
+            <div class="navd3"><p>Controls</p></div>
+            <div class="navd4"><p>Quit</p></div>
+        </nav>
+    </div>
+    <canvas class="game"></canvas>
+
+    <script defer type="module" src="index.js"></script>
+</body>
+</html>

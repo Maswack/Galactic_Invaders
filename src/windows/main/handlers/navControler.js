@@ -1,12 +1,11 @@
 import { panelHandler } from "./panelHandler.js"
 
-//Important elements
-const settingsFrame = document.getElementById("settingsFrame")
-
 class navHandler {
     
     //Control of the whole menu
-    static click(e) {
+    static click(e, insertId) {
+        const settingsFrame = document.getElementById(insertId)
+
         function play() {
             window.electronAPI.startGame()
         }
