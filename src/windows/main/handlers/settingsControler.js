@@ -64,6 +64,7 @@ class settingsControler {
                 }
 
                 window.electronAPI.updateSettings(value, id, type)
+                window.electronAPI.loadSettings()
             }
 
 

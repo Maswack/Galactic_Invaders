@@ -1,21 +1,19 @@
 import { keyController } from "./handlers/keyController.js"
 import { navHandler } from "../main/handlers/navControler.js"
 
-window.addEventListener("load", (event) => {
-    //Get settings and other data
-    //Also set everything up
-    window.electronAPI.sendSettings( (event, data) => {
-        //console.log(data)
 
-        //For key Handling
-        //Is Sent whenever any settings panel is open
+window.addEventListener("load", (event) => {
+    //Setup Controls for player Input
+    window.electronAPI.sendSettings( (event, data) => {
         document.addEventListener('keydown', keyController.setupControls(data.settings.controls))
     })
+    
 
     //Every element in navigation
     const navDiv = document.querySelectorAll("nav div")
     const insertId = "gameSettings"
 
+    
     navDiv.forEach((div) => {
         //Click event
         div.addEventListener("click", (event) => {

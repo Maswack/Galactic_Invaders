@@ -14,12 +14,10 @@ class keyController {
     }
 
     static setupControls(keySetup) {
-        //Something wrong with key Setup
-        //After some time it executes absurd amount of times
-        console.log(keySetup)
 
         //Set Decoder before using it
         this.setDecoder(keySetup)
+      
         
         function setControlsState(eventKey, keyD, value) {  
             const link = keyD[eventKey] + "Pressed"       

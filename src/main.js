@@ -77,6 +77,7 @@ ipcMain.on('update-settings', (event, value, id, type) => {
 
     //write to file
     fs.writeFileSync(game_data_link, JSON.stringify(game_data))
+    
 })
 ipcMain.on('load-settings', () => {
     //Read json file with game data
