@@ -20,7 +20,6 @@ class keyController {
 
         //Set Decoder before using it
         this.setDecoder(keySetup)
-
         
         function setControlsState(eventKey, keyD, value) {  
             const link = keyD[eventKey] + "Pressed"       
@@ -29,14 +28,15 @@ class keyController {
 
             console.log(gameInput.Horizontal())
         }
+        
 
-        document.addEventListener('keydown', event => {
+        document.onkeydown = (event) => {
             setControlsState(event.key, this.keyDecoder, true)
-        })
+        }
 
-        document.addEventListener('keyup', event => {
+        document.onkeyup = (event) => {
             setControlsState(event.key, this.keyDecoder, false)
-        })
+        }
     }
 }
 
