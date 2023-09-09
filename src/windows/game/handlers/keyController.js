@@ -17,19 +17,25 @@ class keyController {
 
         //Set Decoder before using it
         this.setDecoder(keySetup)
-      
+        
+        console.log(keySetup)
         
         function setControlsState(eventKey, keyD, value) {  
             const link = keyD[eventKey] + "Pressed"       
             
             gameInput.setGameInputState(link, value)
+        }
 
-            console.log(gameInput.Horizontal())
+        function openMenu(eventKey) {
+            if (eventKey == keySetup.menuButton) {
+                gameInput.setMenuState();
+            }
         }
         
 
         document.onkeydown = (event) => {
             setControlsState(event.key, this.keyDecoder, true)
+            openMenu(event.key);
         }
 
         document.onkeyup = (event) => {

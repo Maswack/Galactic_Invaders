@@ -14,8 +14,6 @@ class navHandler {
         }
         function audio() {
             panelHandler.loadHtmlFile(settingsFrame, "audio_link")
-
-            settingsFrame.hasChildNodes()
         }
         function controls() {
             panelHandler.loadHtmlFile(settingsFrame, "controls_link")

@@ -17,7 +17,7 @@ body {
 }
 
 #gameSettings {
-    visibility: visible;
+    visibility: hidden;
     height: 100%;
     
 
